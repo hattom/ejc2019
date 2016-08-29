@@ -1,23 +1,67 @@
 ---
-layout: default
+title: Home
 ---
 
-<div class="home">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <h1 class="page-heading">Posts</h1>
+    {% include site-header-favicons.html %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <title>{{ site.title }}</title>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/cover.css" rel="stylesheet">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </head>
 
-</div>
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">EJC2019</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/our-plan">Our Plan</a></li>
+                  <li><a href="/who-we-are">Who We Are</a></li>
+                  <li><a href="/when-and-where">When and Where</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">The Great British EJC</h1>
+            <p class="lead">Newark &middot; United Kingdom &middot; 3&mdash;11 August 2019</p>
+            <p class="lead">
+              <a href="/about" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              {% include site-footer-content.html %}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {% include site-footer-js.html %}
+
+  </body>
+</html>
+
