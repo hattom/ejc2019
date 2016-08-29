@@ -10,7 +10,7 @@
 
     {% include site-header-favicons.html %}
 
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
 
     <link href="/css/main.css" rel="stylesheet">
 
